@@ -1,0 +1,8 @@
+import doganitt.ecommerce.prototype.promotion.RuleEntity;
+
+rule "basic rule"
+    when
+        entity:RuleEntity(name == "");
+    then
+       	entity.setName("rule fired");
+end

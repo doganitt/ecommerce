@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-    droolsVersion = "6.3.0.Final"
+    droolsVersion = "7.24.0.Final"
     spockVersion = "1.0-groovy-2.4"
 }
 
@@ -36,6 +36,7 @@ repositories {
 dependencies {
     compile "org.kie:kie-api:${droolsVersion}"
     compile "org.drools:drools-compiler:${droolsVersion}"
+    compile "org.kie:kie-spring:${droolsVersion}"
     compile "ch.qos.logback:logback-classic:1.1.+"
     compile "org.slf4j:slf4j-api:1.7.+"
     implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
