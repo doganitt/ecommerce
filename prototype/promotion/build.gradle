@@ -35,4 +35,3 @@ dependencies {
     compile "org.slf4j:slf4j-api:1.7.+"
     testCompile "org.spockframework:spock-core:${spockVersion}"
 }
-© 2019 GitHub, Inc.
