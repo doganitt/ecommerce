@@ -1,7 +1,12 @@
+plugins {
+    id 'java'
+    id 'com.gradle.build-scan' version '2.0.2'
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+}
+
 group 'doganitt.prototype.promotion'
 version '1.0.0-SNAPSHOT'
-
-apply plugin: 'java'
 
 sourceCompatibility = 1.8
 
@@ -33,5 +38,7 @@ dependencies {
     compile "org.drools:drools-compiler:${droolsVersion}"
     compile "ch.qos.logback:logback-classic:1.1.+"
     compile "org.slf4j:slf4j-api:1.7.+"
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testCompile "org.spockframework:spock-core:${spockVersion}"
 }
