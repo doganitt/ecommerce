@@ -1,0 +1,4 @@
+{
+  [id:"test1", name:"tester-vip", grade:"vip"],
+  [id:"test2", name:"tester-general", grade:"general"]
+}

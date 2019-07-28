@@ -5,6 +5,7 @@ import java.util.List;
 import doganitt.ecommerce.prototype.product.ProductEntity;
 
 public class CategoryEntity {
+	String id;
 	String name;
 	String fullPath;
 	
