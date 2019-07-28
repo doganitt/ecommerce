@@ -1,8 +1,16 @@
 import doganitt.ecommerce.prototype.product.ProductEntity;
 
-rule "basic promotion1"
+rule "상품 정액할인 : 1000원"
     when
         $product : ProductEntity ( )
     then
        	$product.setDiscountedPrice($product.getSellingPrice()-1000);
+end
+
+rule "카테고리 정액할인 : 1000원"
+    when
+        $product : ProductEntity ( )
+        $category : CategoryEntity ( id == "category1" )
+    then
+       	$product.setDiscountedPrice($product.getDiscountedPrice()-1000);
 end
