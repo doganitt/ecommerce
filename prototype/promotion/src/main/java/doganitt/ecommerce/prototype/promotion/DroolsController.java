@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import doganitt.ecommerce.prototype.product.ProductEntity;
+
 @RestController
 public class DroolsController {
 	@Autowired
@@ -17,13 +19,13 @@ public class DroolsController {
 	}
 	
 	@GetMapping("/drools/basic-rule") 
-	public RuleEntity basicRule() {
-		RuleEntity entity = new RuleEntity();
+	public ProductEntity basicRule() {
+		ProductEntity product = new ProductEntity();
+		product.setSellingPrice(10000);
         KieSession kieSession = kieContainer.newKieSession();
-//        kieSession.setGlobal("rideFare", rideFare);
-        kieSession.insert(entity);
+        kieSession.insert(product);
         kieSession.fireAllRules();
         kieSession.dispose();
-		return entity;
+		return product;
 	}
 }

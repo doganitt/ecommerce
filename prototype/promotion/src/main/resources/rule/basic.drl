@@ -1,8 +1,8 @@
-import doganitt.ecommerce.prototype.promotion.RuleEntity;
+import doganitt.ecommerce.prototype.product.ProductEntity;
 
-rule "basic rule"
+rule "basic promotion1"
     when
-        entity:RuleEntity(name == "");
+        $product : ProductEntity ( )
     then
-       	entity.setName("rule fired");
+       	$product.setDiscountedPrice($product.getSellingPrice()-1000);
 end
